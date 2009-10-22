@@ -17,12 +17,14 @@
 	/*style for the server response field*/
     #resp { font-family:courier;margin:10px;padding:5px;border:1px solid #ccc;background:#fff;}
 	#yui-picker-panel {visibility:hidden;}
+	/* fix for fonts-min.css without a body on YAP */
+    #app{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;}
 </style>
 
 
 <!--end custom header content for this example-->
 
-<div class="yui-skin-sam">
+<div class="yui-skin-sam" id="app">
 
 
 <h1>Example of Color Picker Built in a Dialog via JavaScript</h1>
@@ -169,7 +171,7 @@ YAHOO.example.colorpicker.inDialog = function() {
 			YAHOO.log("Response object:" + lang.dump(o), "error", "example");
 		}
    
-	}
+	};
 
 
 }();
